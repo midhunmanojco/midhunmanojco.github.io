@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Free Website — Template</title>
+  <meta name="description" content="A simple, modern single-file website template ready for free hosting (GitHub Pages / Netlify)." />
+  <!-- Favicon (simple SVG data URL) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23007ACC'/%3E%3Ctext x='50' y='57' font-size='46' text-anchor='middle' fill='white' font-family='Arial, Helvetica, sans-serif'%3EW%3C/text%3E%3C/svg%3E">
+  <style>
+    /* Basic reset */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.5;color:#111;background:linear-gradient(180deg,#f7fbff,#ffffff)}
+
+    /* Container */
+    .wrap{max-width:1100px;margin:36px auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:52px;height:52px;border-radius:12px;background:#007acc;color:white;display:grid;place-items:center;font-weight:700}
+    h1{font-size:20px;margin:0}
+    nav a{margin-left:14px;text-decoration:none;color:#0b4a78;font-weight:600}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-top:28px}
+    .hero-card{background:rgba(255,255,255,0.8);border-radius:16px;padding:28px;box-shadow:0 6px 22px rgba(11,74,120,0.08)}
+    .lead{font-size:28px;margin:0 0 12px}
+    p.lead-desc{margin:0;color:#334;opacity:.9}
+    .cta{margin-top:18px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn-primary{background:#007acc;color:#fff}
+    .btn-ghost{border:2px solid #007acc;color:#007acc;background:transparent}
+
+    /* Features */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+    .feature{background:white;padding:16px;border-radius:12px;border:1px solid rgba(11,74,120,0.06)}
+    .feature h3{margin:0 0 8px;font-size:16px}
+    .feature p{margin:0;color:#444;font-size:14px}
+
+    /* Footer */
+    footer{margin-top:30px;padding:18px 10px;text-align:center;color:#456}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .features{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      .features{grid-template-columns:1fr}
+      .brand h1{font-size:16px}
+      .lead{font-size:20px}
+    }
+
+    /* Simple small utility */
+    .muted{color:#6b7a8a;font-size:13px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#eef6ff;border:1px solid #d6ecff;font-weight:600}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- Header -->
+    <header>
+      <div class="brand">
+        <div class="logo">W</div>
+        <div>
+          <h1>Website Template</h1>
+          <div class="muted">Simple • Fast • Free</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero area -->
+    <section class="hero">
+      <div class="hero-card">
+        <div class="pill">Free template</div>
+        <h2 class="lead">A clean, single-file website you can edit and host for free.</h2>
+        <p class="lead-desc">This template is mobile friendly, fast, and ready to be published on GitHub Pages or Netlify. Replace text, swap images, and your site is live.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#contact">Get started</a>
+          <a class="btn btn-ghost" href="#features">Learn more</a>
+        </div>
+
+        <div style="margin-top:18px;font-size:13px;color:#567">Tip: edit <code>index.html</code> and push to a free GitHub repository named <code>username.github.io</code> to publish instantly.</div>
+      </div>
+
+      <aside class="hero-card" style="text-align:center">
+        <h3 style="margin-top:0">Quick preview</h3>
+        <p class="muted">Brand, features, contact — all in one file. No build step required.</p>
+        <div style="margin-top:16px">
+          <img alt="preview" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'%3E%3Crect rx='12' width='100%25' height='100%25' fill='%23f6fbff'/%3E%3Ctext x='50%25' y='50%25' font-size='18' dominant-baseline='middle' text-anchor='middle' fill='%23707f8f' font-family='Arial'%3EYour site here — customize me%3C/text%3E%3C/svg%3E" style="max-width:100%;border-radius:10px;border:1px solid rgba(11,74,120,0.06)"/>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+      <div class="feature">
+        <h3>Fully responsive</h3>
+        <p>Looks great on phone, tablet, and desktop without extra work.</p>
+      </div>
+      <div class="feature">
+        <h3>No build step</h3>
+        <p>Single HTML file — edit and upload. Perfect for GitHub Pages.</p>
+      </div>
+      <div class="feature">
+        <h3>Accessible</h3>
+        <p>Semantic markup, clear contrast, and keyboard-friendly controls.</p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" style="margin-top:22px;background:transparent;padding:16px;border-radius:12px">
+      <div class="hero-card">
+        <h3 style="margin-top:0">About this template</h3>
+        <p class="muted">This template is intentionally minimal: one file containing HTML, CSS, and small inline images. Use it as a landing page, small portfolio, or mini business site. Replace the logo, change the colors, and add your content.</p>
+
+        <h4 style="margin-bottom:6px">How to customize</h4>
+        <ol style="padding-left:18px;margin-top:8px">
+          <li>Open <code>index.html</code> in a text editor (VS Code is recommended).</li>
+          <li>Edit headings, paragraphs, and links. Replace the SVG images with your own images or an <code>&lt;img&gt;</code> tag pointing to a hosted image.</li>
+          <li>To change theme color, update the <code>#007acc</code> color values in the stylesheet.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" style="margin-top:18px">
+      <div class="hero-card">
+        <h3>Contact</h3>
+        <p class="muted">This contact form is a visual placeholder. To make it functional, connect it to a service like Formspree, Netlify Forms, or a server endpoint.</p>
+        <form onsubmit="handleSubmit(event)" style="display:grid;gap:10px;max-width:520px">
+          <input name="name" placeholder="Your name" required style="padding:10px;border-radius:8px;border:1px solid #d8e8fb" />
+          <input name="email" type="email" placeholder="Your email" required style="padding:10px;border-radius:8px;border:1px solid #d8e8fb" />
+          <textarea name="message" rows="5" placeholder="Message" style="padding:10px;border-radius:8px;border:1px solid #d8e8fb"></textarea>
+          <div>
+            <button class="btn btn-primary" type="submit">Send message</button>
+            <button class="btn btn-ghost" type="button" onclick="resetForm()">Reset</button>
+          </div>
+          <div id="formResult" class="muted" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="muted">Made with ♥ — edit this template and host it for free on GitHub Pages or Netlify.</div>
+    </footer>
+  </div>
+
+  <script>
+    // Small JS: handles the placeholder form and local preview
+    function handleSubmit(e){
+      e.preventDefault();
+      const form = e.target;
+      const name = form.name.value.trim() || 'Friend';
+      const result = document.getElementById('formResult');
+      result.textContent = `Thanks, ${name}! This is a demo form — connect a real endpoint to send messages.`;
+      form.reset();
+    }
+    function resetForm(){
+      const f = document.querySelector('form'); if(f) f.reset();
+      document.getElementById('formResult').textContent = '';
+    }
+  </script>
+
+  <!-- README: Quick deploy instructions (keep in this file for easy copy/paste) -->
+  <!--
+    DEPLOY (option A) — GitHub Pages (free):
+      1. Create a GitHub account at https://github.com if you don't have one.
+      2. Create a new repository named: username.github.io (replace username with your GitHub username).
+      3. Upload this file as index.html to the repository root (use Upload files or push via git).
+      4. After a minute, open https://username.github.io and your site will be live.
+
+    DEPLOY (option B) — Netlify (drag & drop, free tier):
+      1. Go to netlify.com and sign up (you can use GitHub to connect).
+      2. Drag-and-drop this index.html into the Netlify "Sites" > "Add new site" > "Deploy manually" area.
+      3. Netlify will give you a random URL you can customize — site is live instantly.
+
+    NOTES:
+      - To use a custom domain, both GitHub Pages and Netlify support adding custom domains and HTTPS.
+      - To enable a working contact form without a server, use Formspree (formspree.io) or Netlify Forms.
+
+    WANT HELP?
+      - Ask me to customize colors, add sections (blog, gallery, pricing), or produce a ZIP with multiple files.
+  -->
+</body>
+</html>
